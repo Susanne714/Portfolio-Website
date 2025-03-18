@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+
+.btn {
+    height: 48px;
+    border: 1px solid $primary-color;
+    padding: 0 24px;
+    border-radius: 100px;
+    background: transparent;
+    color: white;
+    font-family: 'Karla';
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    >img {
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        border-color: $secundary-color;
+        color: $secundary-color;
+        box-shadow: 0 0 3px 1px $secundary-color;
+        cursor: pointer;
+
+        >img {
+            transform: translateX(4px) translateY(-4px);
+        }
+    }
+
+    &.no-hover:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+        box-shadow: none;
+        cursor: default;
+
+        >img {
+            transform: none;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .btn {
+        font-size: 16px;
+        padding: 0 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .btn {
+        font-size: 15px;
+        padding: 0 12px;
+        height: 44px;
+    }
+}
+
+@media (max-height: 450px) {
+    .btn {
+        height: 44px;
+        padding: 0 16px;
+        font-size: 16px;
+    }
+}

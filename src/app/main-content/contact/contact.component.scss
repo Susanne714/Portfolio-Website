@@ -1,0 +1,527 @@
+@import '../../../styles/variables.scss';
+
+.contact-section {
+    padding: 120px 112px 120px 112px;
+    display: flex;
+    gap: 44px;
+    font-family: 'Karla';
+    color: $primary-color;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.contact-section-text-area {
+    width: 568px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    >.contact-me {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: $secundary-color;
+
+        >p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+
+        >h1 {
+            font-family: 'Fira Code';
+            font-size: 64px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 64px;
+        }
+    }
+
+    >.text-field {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-size: 16px;
+        line-height: 19px;
+
+        >h3 {
+            font-family: 'Fira Code';
+            font-size: 24px;
+            color: $secundary-color;
+            line-height: 29px;
+            margin: 0;
+        }
+
+        >p {
+            margin: 0;
+        }
+
+        >.text-field-offer {
+            >.highlight-text {
+                color: $secundary-color;
+            }
+        }
+    }
+}
+
+.contact-form-area {
+    position: relative;
+    height: 580px;
+}
+
+.contact-form {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: $secundary-color;
+    width: 100%;
+    position: relative;
+
+    >.contact-form-row {
+        border-bottom: 1px solid $secundary-color-darker;
+        padding: 32px;
+        height: 131px;
+        transition: border-color 0.2s ease-in-out;
+
+        &:hover {
+            border-top: 1px solid $secundary-color;
+            border-bottom: 2px solid $secundary-color;
+        }
+
+        >.contact-form-cell {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+
+            >.input-title {
+                font-family: 'Fira Code';
+                color: $secundary-color;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 29px;
+                margin: 0;
+            }
+        }
+    }
+
+    >app-button {
+        display: flex;
+        justify-content: center;
+    }
+
+    >.checkbox {
+        margin: 40px 0 40px 0;
+    }
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: #1C1C1C;
+    font-size: 18px;
+    color: $primary-color;
+    font-family: 'Karla';
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+textarea {
+    max-width: 594px;
+    max-height: 92px;
+}
+
+input::placeholder,
+textarea::placeholder,
+textarea {
+    font-family: 'Karla';
+    font-size: 18px;
+    font-weight: 300;
+    color: #c9bcbca3;
+}
+
+input:focus::placeholder,
+input:focus::placeholder,
+textarea:focus {
+    color: $primary-color;
+}
+
+.contact-form-row:hover input::placeholder,
+.contact-form-row:hover textarea::placeholder,
+.contact-form-row:hover textarea {
+    color: $primary-color;
+    transition: color 0.2s ease-in-out;
+}
+
+textarea.filled {
+    color: $primary-color;
+}
+
+textarea::-webkit-scrollbar {
+    width: 6px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: $secundary-color-darker;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: $secundary-color;
+    }
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 131px;
+    max-height: 150px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+    user-select: none;
+    position: relative;
+    padding-left: 30px;
+    pointer-events: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $secundary-color;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+        pointer-events: auto;
+        cursor: pointer;
+
+        &:hover {
+            background: #3dcfb64d;
+        }
+    }
+
+    .checkmark::after {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid $secundary-color;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    input:checked+.checkmark::after {
+        opacity: 1;
+    }
+}
+
+.confirm-pp {
+    margin-bottom: 16px;
+}
+
+.highlight-privacy-policy {
+    font-family: 'Fira Code';
+    color: $secundary-color;
+    letter-spacing: -0.03em;
+    pointer-events: auto;
+    cursor: pointer;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.send-message {
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-error {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    background: #1C1C1C;
+    color: #EC7B7BCC;
+    font-size: 18px;
+    padding: 8px 0;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pp {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.input-error-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffcc00;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.success-message-overlay,
+.error-message-overlay {
+    background-color: transparent;
+    height: 100px;
+    width: 320px;
+    position: absolute;
+    bottom: -3%;
+    right: -200%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    >.message-bg {
+        background-color: #1C1C1C;
+        border-radius: 48px;
+    }
+}
+
+.success-message-overlay.show,
+.error-message-overlay.show {
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+.success-message-overlay.hide,
+.error-message-overlay.hide {
+    animation: slideOut 1.5s ease-in forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        right: -200%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: -200%;
+    }
+}
+
+.success-message,
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 48px;
+    height: 100px;
+    width: 320px;
+    padding: 8px;
+    color: $primary-color;
+    line-height: 24px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+    font-family: 'Fira Code';
+    font-size: 15px;
+}
+
+.success-message {
+    border: 1px solid #3DCFB6;
+    box-shadow: 0 0 3px 1px #3DCFB6;
+    background: rgba(61, 207, 182, 0.1);
+    color: $secundary-color;
+
+    >.gratitude {
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        color: $primary-color;
+    }
+}
+
+.error-message {
+    border: 1px solid #ec7b7b;
+    box-shadow: 0 0 3px 2px rgb(227 21 21 / 61%);
+    background: #ec7b7b47;
+    font-size: 12px;
+
+    >.error {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        color: #ec7b7b;
+    }
+}
+
+@media (min-width: 1740px) {
+    .contact-section {
+        padding: 120px 240px 120px 240px !important;
+    }
+}
+
+@media (min-width: 1520px) {
+    .contact-section {
+        padding: 120px 140px 120px 140px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .contact-section {
+        padding: 120px 50px 120px 50px;
+    }
+}
+
+@media (max-width: 1055px) {
+    .contact-section {
+        flex-direction: column;
+        gap: 64px;
+    }
+}
+
+@media (max-width: 755px) {
+    .contact-section-text-area {
+        width: 100%;
+
+        >.contact-me {
+            >h1 {
+                font-size: 56px;
+                max-width: 568px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .contact-section {
+        padding: 120px 16px 120px 16px;
+    }
+
+    .contact-section-text-area {
+        >.contact-me {
+            >p {
+                font-size: 18px;
+            }
+        }
+
+        >.text-field {
+            >h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .contact-form {
+        >.contact-form-row {
+            padding: 32px 12px;
+
+            >.contact-form-cell {
+                >.input-title {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    input,
+    textarea {
+        font-size: 15px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .contact-section {
+        gap: 44px;
+    }
+
+    .contact-section-text-area {
+        gap: 32px;
+
+        >.contact-me {
+            >h1 {
+                font-size: 44px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    .input-error {
+        font-size: 14.5px;
+        border-radius: 0px;
+    }
+
+    .pp {
+        margin-top: 16px;
+    }
+
+    .success-message-overlay,
+    .error-message-overlay {
+        bottom: -5%;
+    }
+
+    .success-message,
+    .error-message {
+        width: 268px;
+        gap: 8px;
+        line-height: 16px;
+
+        >.gratitude {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-height: 450px) {
+    .contact-section-text-area {
+        gap: 20px;
+
+        >.contact-me {
+            >h1 {
+                font-size: 48px;
+                line-height: 45px;
+            }
+        }
+    }
+}

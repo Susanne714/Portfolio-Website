@@ -1,0 +1,341 @@
+@import '../../../styles/variables.scss';
+
+.product {
+    padding: 120px 0 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+
+    >h1 {
+        color: #3DCFB6;
+        display: flex;
+        font-family: 'Fira Code';
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.container-fluid {
+    margin-bottom: 8px;
+}
+
+.card-slider-wrap {
+    display: flex;
+    align-items: flex-end;
+    height: 300px;
+    position: relative;
+    width: 1440px;
+    overflow: hidden;
+}
+
+.card-slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, rgba(28, 28, 28, 1) 0%, rgba(28, 28, 28, 0) 25%, rgba(28, 28, 28, 0) 75%, rgba(28, 28, 28, 1) 100%);
+    z-index: 10;
+}
+
+.card-slider-main {
+    position: absolute;
+    max-width: 1440px;
+    left: -292px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    cursor: grab;
+
+    &.dragging {
+        cursor: grabbing;
+    }
+}
+
+.card-item {
+    background: #3DCFB6;
+    position: relative;
+    width: 632px;
+    height: 248px;
+    background: rgba(61, 207, 182, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid $secundary-color;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px 40px;
+    font-family: 'Karla';
+    color: $primary-color-darker;
+    gap: 44px;
+    user-select: none;
+    scroll-snap-align: start;
+
+    &.active {
+        height: 274px;
+        background-color: rgba(61, 207, 182, 0.3);
+    }
+
+    >.card-text {
+        font-size: 20px;
+        line-height: 24px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+
+        >p {
+            margin: 0;
+        }
+    }
+
+    .referenced-by {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 552px;
+
+        >.separator {
+            border-bottom: 1px solid white;
+            flex-grow: 1;
+        }
+
+        >.name {
+            display: flex;
+            justify-content: center;
+
+            >p {
+                margin: 0;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.quote-icon {
+    position: absolute;
+    top: 7%;
+    left: 28.1%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.scroll-ref {
+    display: flex;
+
+    >.arrow-last {
+        content: url('../../../assets/img/arrow_last_ref.png');
+        transition: content 0.3s ease-in-out;
+
+        &:hover {
+            content: url('../../../assets/img/arrow_last_ref_hover.png');
+            transform: translateX(-4px);
+            cursor: pointer;
+        }
+    }
+
+    >.arrow-next {
+        content: url('../../../assets/img/arrow_next_ref.png');
+        transition: content 0.3s ease-in-out;
+
+        &:hover {
+            content: url('../../../assets/img/arrow_next_ref_hover.png');
+            transform: translateX(4px);
+            cursor: pointer;
+        }
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    span {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: lightgray;
+        transition: background-color 0.3s ease;
+
+        &.active {
+            background-color: #3DCFB6;
+        }
+    }
+}
+
+@media (max-width: 958px) {
+    .card-slider-wrap {
+        height: 350px;
+        width: 958px;
+    }
+
+    .quote-icon {
+        top: 2%;
+        left: 30.5%;
+    }
+
+    .card-slider-main {
+        left: -196px;
+        gap: 24px;
+    }
+
+    .card-item {
+        width: 470px;
+        height: 310px;
+        padding: 40px;
+        gap: 44px;
+
+        &.active {
+            height: 330px;
+        }
+
+        >.card-text {
+            font-size: 18px;
+            line-height: 21px;
+            margin-top: 20px;
+        }
+
+        >.referenced-by {
+            width: 352px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .product {
+        h1 {
+            font-size: 24px;
+            margin: 0 16px;
+        }
+    }
+
+    .card-slider-wrap {
+        height: 374px;
+    }
+
+    .quote-icon {
+        top: 0;
+        left: 35%;
+    }
+
+    .card-slider-main {
+        left: -66px;
+        gap: 8px;
+    }
+
+    .card-item {
+        width: 358px;
+        height: 248px;
+        padding: 40px;
+        line-height: 21px;
+        gap: 44px;
+
+
+        &.active {
+            height: 360px;
+
+            >.card-text {
+                height: 100%;
+                overflow: visible;
+            }
+        }
+
+        >.referenced-by {
+            width: 278px;
+        }
+
+        >.card-text {
+            height: 149px;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .card-slider-wrap {
+        height: 412px;
+    }
+
+    .quote-icon {
+        top: 0;
+        left: 38.3%;
+    }
+
+    .card-slider-main {
+        left: 21px;
+        gap: 8px;
+    }
+
+    .card-item {
+        width: 300px;
+        height: 320px;
+        padding: 40px;
+        line-height: 21px;
+        padding: 40px 24px 40px 24px;
+        gap: 44px;
+
+
+        &.active {
+            height: 400px;
+
+            >.card-text {
+                height: 100%;
+                overflow: visible;
+            }
+        }
+
+        >.referenced-by {
+            width: 252px;
+        }
+    }
+}
+
+@media (max-height: 450px) {
+    .product {
+        gap: 20px;
+    }
+
+    .card-slider-wrap {
+        height: 210px;
+    }
+
+    .card-slider-main {
+        left: -350px;
+    }
+
+    .card-item {
+        width: 540px;
+        height: 180px;
+        padding: 20px;
+
+        &.active {
+            height: 200px;
+        }
+
+        >.card-text {
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        >.referenced-by {
+            width: 500px;
+        }
+    }
+
+    .quote-icon {
+        top: 0;
+        left: 25%;
+        width: 60px;
+    }
+}

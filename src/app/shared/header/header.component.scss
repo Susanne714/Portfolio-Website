@@ -1,0 +1,204 @@
+@import '../../../styles/variables.scss';
+
+.header-wrapper {
+    position: relative;
+
+    >.header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        height: 98px;
+        width: 100%;
+        z-index: 1000;
+        padding: 0 96px;
+        background: linear-gradient(#1C1C1C 30%, transparent);
+        backdrop-filter: blur(10px);
+        font-family: 'Fira Code';
+        color: $primary-color;
+
+        >.nav-header-left,
+        .nav-header-link {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-header-link span {
+            @include dot($hoverable: true, $position: 'below');
+            cursor: pointer;
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 1rem;
+        }
+
+        >img {
+            height: 48px;
+            transition: all 0.6s ease-in-out;
+
+            &:hover {
+                content: url(../../../assets/img/logo_light.png);
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .header-content-slim {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        height: 98px;
+        width: 100%;
+        z-index: 1000;
+        padding: 0 96px;
+        background: linear-gradient(#1C1C1C 30%, transparent);
+        backdrop-filter: blur(10px);
+
+        >img {
+            width: 35px;
+        }
+    }
+
+    .language-slider {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: transparent;
+        border-radius: 25px;
+        width: 88px;
+        height: 28px;
+
+        >.language-option {
+            width: 44px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+            transition: color 0.3s;
+            padding: 0 12px;
+            border: 1px solid $secundary-color;
+
+            &.left {
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                border-right: none;
+            }
+
+            &.right {
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                border-left: none;
+            }
+        }
+
+        >.slider-thumb {
+            position: absolute;
+            width: 44px;
+            height: 28px;
+            background-color: $secundary-color;
+            border-radius: 25px;
+            transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+    }
+
+    .overlay-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.76);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+        >.nav-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            font-family: 'Fira Code';
+            top: 70px;
+            right: 24px;
+            padding: 32px 69px;
+            border: 1px solid $secundary-color;
+            border-radius: 30px;
+            background: linear-gradient(223deg, #08463B 20%, #1C1C1C 60%);
+            transform: translateY(-10px);
+            transition: transform 0.3s ease-in-out;
+
+            >.nav-header-link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+                width: 119px;
+
+                >span {
+                    @include dot($hoverable: true, $position: 'below');
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+
+            .nav-mobile {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .header-wrapper {
+        .header-content {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media (max-width: 920px) or (max-height: 450px) {
+    .header-wrapper {
+        >.header-content {
+            display: none;
+        }
+
+        >.header-content-slim {
+            display: flex;
+            padding: 0 50px;
+
+            >.logo-slim {
+                width: 44px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .header-wrapper {
+        >.header-content-slim {
+            padding: 0 16px;
+        }
+    }
+}
+
+@media (max-height: 450px) {
+    .header-wrapper {
+        >.header-content-slim {
+            backdrop-filter: blur(0);
+            height: 58px;
+        }
+    }
+}

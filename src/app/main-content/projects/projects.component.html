@@ -1,0 +1,40 @@
+<section id="projects">
+        <h3>Portfolio</h3>
+
+        <div class="portfolio-intro">
+            <h1>{{'projects.title' | translate}}</h1>
+            <p>
+                {{ 'projects.introduction_1' | translate }}
+                <span class="optional-break"><br></span>
+                {{ 'projects.introduction_2' | translate }}
+            </p>
+        </div>
+
+        <div class="projects-overview">
+            <div class="custom-table">
+                <div *ngFor="let project of previewProjectData" class="table-row" (mouseenter)="hoveredProject = project" (mouseleave)="hoveredProject = null" (click)="openProjectPopup(project.title)">
+                    <div class="table-cell">
+                        <div class="project-title-left">
+                            <p class="project-title">{{ project.title }}</p>
+                            <img src="../../../assets/img/arrow_outward.png" alt="">
+                        </div>                       
+                        <div class="project-tech">
+                            <ng-container *ngFor="let tech of project.techs; let last = last">
+                                <p>{{ tech }}</p>
+                                <span *ngIf="!last">|</span>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="preview-section">
+                <div *ngFor="let project of previewProjectData" class="preview-wrapper" [class.visible]="hoveredProject === project" [ngStyle]="{ 'top': project.top }">
+                    <div class="background-overlay"></div>
+                    <img [src]="project.image" class="preview-image">
+                </div>
+            </div>            
+        </div>     
+        
+        <app-project-popup *ngIf="selectedProject" [project]="selectedProject" (close)="closeProjectPopup()" (next)="nextProject()"></app-project-popup>
+</section>

@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^.*$ - [NC,L]
+
+
+RewriteRule ^(.*) /index.html [NC,L]
+
+# Setze Ablaufdatum für Fonts
+<FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+  Header set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate"
+</FilesMatch>
+
+# CORS für Schriftarten
+<FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

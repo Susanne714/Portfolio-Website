@@ -1,0 +1,43 @@
+<div class="product">   
+    <h1>{{'comments.header' | translate}}</h1> 
+    
+    <div class="container-fluid">
+        <div class="card-slider-wrap">  
+            <img class="quote-icon" src="../../../assets/img/quotes.png" alt="Quotes">          
+            <div class="card-slider-main" #slider 
+            class="card-slider-main"
+                (mousedown)="onDragStart($event)" 
+                (mousemove)="onDragMove($event)" 
+                (mouseup)="onDragEnd()"
+                (mouseleave)="onDragEnd()"
+                (touchstart)="onDragStart($event)" 
+                (touchmove)="onDragMove($event)" 
+                (touchend)="onDragEnd()">
+                <div *ngFor="let card of cards; let i = index" 
+                     class="card-item" 
+                     [ngClass]="{ 'active': i === 1 }">
+                     <div class="card-text">
+                        <p [innerHTML]="card.textKey | translate"></p>
+                    </div>
+                    <div class="referenced-by">
+                        <div class="separator"></div>
+                        <div class="name"><p>{{card.authorKey | translate}}</p></div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="card-slider-overlay"></div>
+        </div>  
+    </div>
+
+    <div class="scroll-ref">
+        <img class="arrow-last" src="" alt="" (click)="prevFunc()"> 
+        <div class="dots">
+            <span *ngFor="let card of cards; let i = index" 
+                  [class.active]="i === activeIndex">
+            </span>
+        </div>
+        <img class="arrow-next" src="" alt="" (click)="nextFunc()"> 
+    </div>
+</div>
+
+

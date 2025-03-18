@@ -1,0 +1,48 @@
+$primary-color: white;
+$primary-color-darker: hsla(0, 0%, 100%, 0.8);
+$secundary-color: #3DCFB6;
+$secundary-color-darker: #3dcfb680;
+$tertiary-color: #D9D9D9;
+
+$hover-dot-size: 7px;
+$hover-dot-color: #3DCFB6;
+
+@mixin dot($size: 7px, $color: #3DCFB6, $hoverable: false, $position: 'below') {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: $size;
+        height: $size;
+        background-color: $color;
+        border-radius: 50%;
+        opacity: if($hoverable, 0, 1);
+        transition: opacity 0.3s ease-in-out;
+
+
+        @if $position =='below' {
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @else if $position =='right' {
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @else if $position =='left' {
+            left: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    @if $hoverable {
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}

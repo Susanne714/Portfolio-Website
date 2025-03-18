@@ -1,0 +1,3 @@
+<button class="btn" [ngClass]="[color, disableHover ? 'no-hover' : '']" (click)="handleClick()" [attr.disabled]="disabled !== null ? disabled : null">{{label}}
+    <img *ngIf="showArrow" src="../../../assets/img/arrow_outward_button.png" alt="Arrow">
+</button>

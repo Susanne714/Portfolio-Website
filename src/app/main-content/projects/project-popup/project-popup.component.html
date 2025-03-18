@@ -1,0 +1,41 @@
+<div class="popup-overlay" (click)="closePopup()">
+    <div class="card-item" (click)="onCardClick($event)">
+        <div class="close-card" (click)="closePopup()"><img class="close-image" src="../../../../assets/img/close_small.png" alt="Close"></div>
+
+<div class="project-card-content">
+    <div class="project-info-section">
+        <div class="project-header">
+            <div class="project-number">{{project?.number}}</div>
+            <div class="project-name">{{project?.title}}</div>
+        </div>
+
+        <div class="project-details">
+            <h2>{{'project_popup.header' | translate}}</h2>
+            <p>{{ project?.descriptionKey || 'default.description' | translate }}</p> <!--🕺Thanks, Elvis! ?:-->
+            <div class="used-tech">
+                <div class="tech-icon" *ngFor="let tech of project?.techs">
+                    <img [src]="tech.icon" [alt]="tech.name">
+                    <p>{{ tech.name }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <!-- <app-button label="GitHub" [showArrow]="true"></app-button>
+            <app-button label="Live Test" [showArrow]="true"></app-button> -->
+
+            <app-button [label]="'GitHub'" (click)="openLink(project?.githubLink)"></app-button>
+            <app-button [label]="'Live Test'" (click)="openLink(project?.liveLink)"></app-button>
+        </div>
+    </div>
+
+    
+        <img [src]="project?.image" alt="Project Image">
+    
+</div>
+
+<div class="next-page">
+    <div (click)="triggerNextProject()"><p>{{'project_popup.next_page' | translate}}</p><img src="" alt=""></div>
+    </div>
+    </div>
+</div>

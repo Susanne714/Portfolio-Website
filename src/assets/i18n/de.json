@@ -1,0 +1,125 @@
+{
+    "header": {
+        "about_me": "Über mich",
+        "skills": "Kompetenzen",
+        "projects": "Projekte"
+    },
+    "hero": {
+        "welcome": "Hallo! Ich bin",
+        "button_work": "Meine Arbeiten",
+        "button_contact": "Kontakt",
+        "availability": "Verfügbar für Remote-Arbeit",
+        "job_title": "Frontend Developer",
+        "location": "Sitz in Düsseldorf",
+        "mindset": "Offen für Neues",
+        "goal": "Fokus auf Lösungen"
+    },
+    "about": {
+        "title": "Wer ich bin",
+        "me": "Über mich",
+        "motivation": "Hallo, ich bin Frontend-Entwicklerin mit Sitz in Düsseldorf. Die grenzenlosen Möglichkeiten in der IT motivieren mich, intuitive und visuell ansprechende Anwendungen zu entwickeln.",
+        "environment": "Ich bin flexibel: ich kann sowohl vor Ort in Düsseldorf als auch remote arbeiten.",
+        "mindset": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten stetig zu verbessern.",
+        "offer": "In meinem Beruf geht es beim Programmieren um eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzusetzen. Damit unterstütze ich Sie, Ihre Ziele zu erreichen und Ihre Ideen zu verwirklichen."
+    },
+    "skills": {
+        "header": "Technologien",
+        "title": "Skills",
+        "description": "Auf meinem Weg habe ich an verschiedenen Projekten gearbeitet und dabei verschiedene Frontend-Technologien und Konzepte eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung vorne zu bleiben.",
+        "att_1": "Sie brauchen",
+        "att_2": "weitere Fähigkeiten?",
+        "att_3": "Sprechen Sie mich direkt an. Ich baue mein Wissen gern weiter aus.",
+        "contact_btn": "Unterhalten wir uns",
+        "interested_in": "Ich bin auch interessiert an:"
+    },
+    "projects": {
+        "title": "Ausgewählte Projekte",
+        "introduction_1": "Hier finden Sie eine Auswahl meiner Arbeiten - Sehen Sie sich ",
+        "introduction_2": "die Projekte gern an und probieren sie aus.",
+        "join": {
+            "title": "Join",
+            "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
+        },
+        "el_pollo_loco": {
+            "title": "El Pollo Loco",
+            "description": "Jump'n'Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu sammeln, um gegen das verrückte Huhn zu kämpfen."
+        },
+        "pokedex": {
+            "title": "Pokédex",
+            "description": "Eine Webanwendung, die Pokémon-Daten aus einer REST-API abruft und Details wie Typen, Statistiken und Fähigkeiten anzeigt."
+        }
+    },
+    "default": {
+        "description": "Keine Beschreibung verfügbar."
+    },
+    "project_popup": {
+        "header": "Worum geht es in diesem Projekt?",
+        "next_page": "Nächstes Projekt"
+    },
+    "comments": {
+        "header": "Was meine Kollegen über mich sagen",
+        "card1": {
+            "text": "Ich habe sehr gute Erfahrungen in der Zusammenarbeit mit Susanne gemacht. Mit ihrer positiven Einstellung lässt sie sich von Schwierigkeiten nicht unterkriegen und motiviert die Menschen um sich herum, nicht aufzugeben.",
+            "author": "Dennis - Teamkollege"
+        },
+        "card2": {
+            "text": "Susanne ist sowohl geduldig als auch hartnäckig, wenn es darum geht, eine Lösung zu finden. Selbst in schwierigen Situationen oder Projekten behält sie eine positive Einstellung. Es ist toll, mit ihr zusammenzuarbeiten!",
+            "author": "Jenny - Teammate"
+        },
+        "card3": {
+            "text": "Susanne ist ein großartiger Teamplayer mit einem ausgeprägten Sinn für Technik und Funktionalität. Ihre strukturierte Arbeitsweise, kombiniert mit einer beeindruckenden Lernfähigkeit, macht sie zu einer echten Bereicherung für jedes Projekt. Die Zusammenarbeit mit ihr ist nicht nur produktiv, sondern macht auch Spaß!",
+            "author": "Alex - Teammate"
+        },
+        "card4": {
+            "text": "Ich kenne Susanne als eine zuverlässige Kollegin, die strukturiert und lösungsorientiert vorgeht. Sie ist immer offen für neue Ideen und daran interessiert, Prozesse zu verbessern und benutzerfreundlicher zu gestalten.",
+            "author": "Mark - Teamleiter"
+        },
+        "card5": {
+            "text": "Die Zusammenarbeit mit Susanne in mehreren IT-Projekten hat mir sehr viel Spaß gemacht. Sie war immer bestrebt, sinnvolle Verbesserungen zu realisieren und achtete auf die tatsächliche Machbarkeit innerhalb der Arbeitsprozesse, unterstützte Testszenarien und gab wertvolles Feedback.",
+            "author": "Christian - IT Kollege"
+        },
+        "card6": {
+            "text": "Susanne hat sich als Key-User unsere Fertigungsprozesse direkt angesehen und so unterstützt, dass im ERP-System alles gut abgebildet wurde. Zusätzlich hat sie den Kollegen stets beim Umgang mit dem System immer geholfen.",
+            "author": "Heinrich - Coworker"
+        }
+    },
+    "contact": {
+        "title": "Kontakt",
+        "header": "Arbeiten wir zusammen",
+        "subtitle": "Brauchen Sie Unterstützung?",
+        "offer": "Nutzen Sie gern das Formular zur Kontaktaufnahme. Ich möchte Sie und Ihre Ideen kennenlernen und darüber sprechen, wie ich mit meiner Arbeit Ihre Projekte unterstützen kann.",
+        "request_1": "Suchen Sie einen Frontend Developer?",
+        "request_2": "Lassen Sie uns reden!",
+        "form_name": "Wie heißen Sie?",
+        "placeholder_name": "Ihr Name",
+        "error_name": "Bitte geben Sie Ihren Vor- und Nachnamen ein.",
+        "form_email": "Ihre E-Mail?",
+        "error_email": "Bitte geben Sie eine gültige E-Mail Adresse ein.",
+        "form_message": "Wie kann ich helfen?",
+        "error_message": "Teilen Sie mir Ihr Anliegen mit.",
+        "form_textfield": "Hallo Susanne, ich bin interessiert an...",
+        "confirm_pp1": "Ich habe die",
+        "confirm_pp2": "Datenschutzbestimmungen",
+        "confirm_pp3": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+        "error_pp": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+        "success_msg1": "Danke für Ihre Nachricht!",
+        "success_msg2": "Ich melde mich in Kürze bei Ihnen.",
+        "error_msg1": "Fehler!",
+        "error_msg2": "Ihre Nachricht wurde nicht übermittelt. Bitte versuchen Sie es später erneut."
+    },
+    "footer": {
+        "location": "Düsseldorf, Deutschland",
+        "legal": "Impressum"
+    },
+    "legal_notice": {
+        "title": "Impressum",
+        "contact": "Kontakt",
+        "phone": "Telefon",
+        "mail": "E-Mail",
+        "source": "Quelle",
+        "pp_link1": "Informationen über die",
+        "pp_link2": "Datenschutzbestimmungen",
+        "pp_link3": "finden Sie",
+        "pp_link4": "hier"
+    }
+}

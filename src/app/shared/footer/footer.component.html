@@ -1,0 +1,23 @@
+<footer>
+    <div class="footer-section">
+        <div class="footer-left">
+            <img src="../../../assets/img/logo_full.png" alt="">
+            <div class="footer-info">
+                <span>Web Developer</span>
+                <span>{{'footer.location' | translate}}</span>
+            </div>
+        </div>
+
+        <div class="footer-mid">© Susanne Borchardt 2025</div>
+
+        <div class="footer-right">
+            <div class="footer-links">
+                <a href="https://github.com/Susanne714" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/susanne-b-21a6b5356/" target="_blank">LinkedIn</a>
+                <a [href]="'mailto:' + email">Email</a>
+                <a routerLink="/legalNotice" routerLinkActive="active">{{ 'footer.legal' | translate }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-mid-slim">© Susanne Borchardt 2025</div>
+</footer>

@@ -1,0 +1,125 @@
+{
+    "header": {
+        "about_me": "About me",
+        "skills": "Skills",
+        "projects": "Projects"
+    },
+    "hero": {
+        "welcome": "Hi! I'm",
+        "button_work": "Check my work",
+        "button_contact": "Contact me",
+        "availability": "Available for remote work",
+        "job_title": "Frontend Developer",
+        "location": "Based in Düsseldorf",
+        "mindset": "Open to new ideas",
+        "goal": "Focus on solutions"
+    },
+    "about": {
+        "title": "Who I am",
+        "me": "About me",
+        "motivation": "Hi, I'm a German speaking Frontend Developer based in Düsseldorf. Motivated by the limitless opportunities within IT, I'm exited about crafting visually captivating and intuitive websites and applications.",
+        "environment": "I'm flexible in terms of the working environment. I can work both on-site in Düsseldorf and remotely.",
+        "mindset": "I'm open minded and always looking for personal challenges to constantly improve my knowledge and skills.",
+        "offer": "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your vision to life."
+    },
+    "skills": {
+        "header": "Technologies",
+        "title": "Skill Set",
+        "description": "My journey has involved working on diverse projects, employing a range of Frontend technologies and concepts. I'm open to embracing new technologies and methodologies to continiously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+        "att_1": "You need",
+        "att_2": "another skill?",
+        "att_3": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "contact_btn": "Let's talk",
+        "interested_in": "I have special interest in learning:"
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "introduction_1": "Explore a selection of my work here - Interact with ",
+        "introduction_2": "projects to see my skills in action.",
+        "join": {
+            "title": "Join",
+            "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+        },
+        "el_pollo_loco": {
+            "title": "El Pollo Loco",
+            "description": "Jump, run and throw game based on object-orientated approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+        },
+        "pokedex": {
+            "title": "Pokédex",
+            "description": "A web application that fetches Pokémon data from a REST API and displays details like types, stats, and abilities."
+        }
+    },
+    "default": {
+        "description": "No description available."
+    },
+    "project_popup": {
+        "header": "What is this project about?",
+        "next_page": "Next project"
+    },
+    "comments": {
+        "header": "What my collagues say about me",
+        "card1": {
+            "text": "I have had very good experiences working with Susanne. With her positive attitude, she doesn&#39;t let herself be affected by difficulties and motivates those around her not to give up.",
+            "author": "Dennis - Teammate"
+        },
+        "card2": {
+            "text": "Susanne is both patient and persistent when it comes to finding a solution. She keeps a positive mindset even in challenging situations or projects. It&#39;s a pleasure to work with her! ",
+            "author": "Jenny - Teammate"
+        },
+        "card3": {
+            "text": "Susanne is a great team player with an amazing sense of technology and functionality. Her structured way of working, combined with an impressive ability to learn, make her a valuable asset to any project. Working with her is not only productive but also a great pleasure!",
+            "author": "Alex - Teammate"
+        },
+        "card4": {
+            "text": "I know Susanne as a reliable colleague who acts in a structured and solution-orientated approach. She is always open to new ideas, interested in improving processes and making them more user-friendly.",
+            "author": "Mark - Team leader"
+        },
+        "card5": {
+            "text": "I really enjoyed working with Susanne on several IT projects. She was always keen to realise appropriate improvements and paid attention to the actual feasibility within the working processes, supported test scenarios and provided valuable feedback.",
+            "author": "Christian - IT Colleague"
+        },
+        "card6": {
+            "text": "As a key user, Susanne looked directly at our production processes and ensured that everything was well mapped in the ERP system. In addition, she always helped her colleagues with using the system.",
+            "author": "Heinrich - Coworker"
+        }
+    },
+    "contact": {
+        "title": "Contact me",
+        "header": "Let's work together",
+        "subtitle": "Got a problem to solve?",
+        "offer": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+        "request_1": "Need a Frontend developer?",
+        "request_2": "Let's talk!",
+        "form_name": "What's your name?",
+        "placeholder_name": "Your name here",
+        "error_name": "Please enter your full name.",
+        "form_email": "What's your email?",
+        "error_email": "Please enter a valid email address.",
+        "form_message": "How can I help you?",
+        "error_message": "Let me know what you need to develop.",
+        "form_textfield": "Hello Susanne, I'm interested in...",
+        "confirm_pp1": "I've read the",
+        "confirm_pp2": "privacy policy",
+        "confirm_pp3": "and agree to the processing of my data as outlined.",
+        "error_pp": "Please accept the privacy policy.",
+        "success_msg1": "Thanks for your message!",
+        "success_msg2": "I will get back to you soon.",
+        "error_msg1": "Error!",
+        "error_msg2": "Your message could not be forwarded. Please try again later."
+    },
+    "footer": {
+        "location": "Düsseldorf, Germany",
+        "legal": "Legal Notice"
+    },
+    "legal_notice": {
+        "title": "Legal Notice",
+        "contact": "Contact",
+        "phone": "Phone",
+        "mail": "Email",
+        "source": "Source",
+        "pp_link1": "Information regarding the",
+        "pp_link2": "privacy policy",
+        "pp_link3": "can be found",
+        "pp_link4": "here"
+    }
+}

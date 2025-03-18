@@ -1,0 +1,38 @@
+    <header class="header-wrapper">
+        <nav class="header-content">
+            <div class="nav-header-left">
+                <div class="language-slider">
+                    <div class="language-option left" [ngStyle]="{ color: currentLanguage === 'EN' ? '#FFFFFF' : '#3DCFB6' }" (click)="toggleLanguage()">EN</div>
+                    <div class="language-option right" [ngStyle]="{ color: currentLanguage === 'DE' ? '#FFFFFF' : '#3DCFB6' }" (click)="toggleLanguage()">DE</div>
+                    <div class="slider-thumb" [ngStyle]="{ left: currentLanguage === 'EN' ? '0' : 'calc(100% - 44px)' }"></div>
+                </div>
+                <div class="nav-header-link">
+                    <span (click)="scrollToSection('about_me')">{{'header.about_me' | translate}}</span>
+                    <span (click)="scrollToSection('skills')">{{'header.skills' | translate}}</span>
+                    <span (click)="scrollToSection('projects')">{{'header.projects' | translate}}</span>
+                </div>
+            </div>  
+            <img src="../../../assets/img/logo_full.png" alt="SB Logo" class="logo">             
+        </nav>
+
+        <nav class="header-content-slim">
+            <img class="logo-slim" src="../../../assets/img/logo_short.png" alt="Logo">
+            <img src="../../../assets/img/2. Menu icon.png" alt="Menu" (click)="toggleMenu()">
+
+            <div class="overlay-mobile" [ngClass]="{ 'open': isMenuOpen }" (click)="toggleMenu()">
+                <div class="nav-mobile">
+                    <div class="nav-header-link">
+                        <span (click)="scrollToSection('about_me')">{{'header.about_me' | translate}}</span>
+                        <span (click)="scrollToSection('skills')">{{'header.skills' | translate}}</span>
+                        <span (click)="scrollToSection('projects')">{{'header.projects' | translate}}</span>
+    
+                        <div class="language-slider">
+                            <div class="language-option left" [ngStyle]="{ color: currentLanguage === 'EN' ? '#FFFFFF' : '#3DCFB6' }" (click)="toggleLanguage()">EN</div>
+                            <div class="language-option right" [ngStyle]="{ color: currentLanguage === 'DE' ? '#FFFFFF' : '#3DCFB6' }" (click)="toggleLanguage()">DE</div>
+                            <div class="slider-thumb" [ngStyle]="{ left: currentLanguage === 'EN' ? '0' : 'calc(100% - 44px)' }"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </nav>
+    </header>

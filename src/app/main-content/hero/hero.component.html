@@ -1,0 +1,52 @@
+<div class="hero-section">
+  <div class="welcome-section">
+    <div class="welcome-section-txt">
+      <h3>{{'hero.welcome' | translate}}</h3>
+      <h1>Susanne Borchardt</h1>
+      <h2>Frontend Developer</h2>
+    </div>
+    
+    <div class="welcome-section-btn">
+      <app-button label="{{'hero.button_work' | translate}}" (click)="scrollToSection('projects')"></app-button>
+      <app-button label="{{'hero.button_contact' | translate}}" (click)="scrollToSection('contact')"></app-button>
+    </div>  
+  </div>
+
+  <div class="left-lateral">
+    <div class="vertical-button">
+      <span class="arrow">↑</span>
+    </div>
+    <div class="stroke-long"></div>
+  </div>
+
+  <div class="right-lateral">
+    <div class="vertical-text">
+      <a [href]="'mailto:' + email" class="vertical-email">{{ email }}</a>
+    </div>
+    <div class="platforms">
+      <a [href]="'mailto:' + email" class="mail-icon"><img src="../../../assets/img/mail(3).png" alt="Mail"></a>
+      <a href="https://github.com/Susanne714" target="_blank"><img src="../../../assets/img/gthb_green.png" alt="Github"></a>
+      <a href="https://www.linkedin.com/in/susanne-b-21a6b5356/" target="_blank"><img src="../../../assets/img/lnkdin_green.png" alt="Github"></a>
+      <!-- <div><img src="../../../assets/img/lnkdin_green.png" alt="LinkedIn"></div> -->
+    </div>    
+    <div class="stroke-short"></div>
+  </div>
+
+  <div class="marquee">
+    <ul>
+      <li><span>{{'hero.availability' | translate}}</span></li>
+      <li><span>{{'hero.job_title' | translate}}</span></li>
+      <li><span>{{'hero.location' | translate}}</span></li>
+      <li><span>{{'hero.mindset' | translate}}</span></li>
+      <li><span>{{'hero.goal' | translate}}</span></li>
+    </ul>
+
+    <ul aria-hidden="true">
+      <li><span>{{'hero.availability' | translate}}</span></li>
+      <li><span>{{'hero.job_title' | translate}}</span></li>
+      <li><span>{{'hero.location' | translate}}</span></li>
+      <li><span>{{'hero.mindset' | translate}}</span></li>
+      <li><span>{{'hero.goal' | translate}}</span></li>
+    </ul>
+  </div>    
+</div>
