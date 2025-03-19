@@ -61,8 +61,8 @@ export class ContactComponent implements OnDestroy {
    */
   private loadTranslatedText() {
     this.translate.get('contact.form_textfield').subscribe((translatedText: string) => {
-      this.message = translatedText || "Hello Susanne, I'm interested in...";
-      this.defaultMessage = translatedText || "Hello Susanne, I'm interested in...";
+      this.message = translatedText || "Hello Susanne,...";
+      this.defaultMessage = translatedText || "Hello Susanne,...";
     });
   }
 
@@ -110,8 +110,31 @@ export class ContactComponent implements OnDestroy {
 
     return (
       trimmedMessage !== trimmedDefault &&
-      additionalLength >= 30
+      additionalLength >= 3
     );
+  }
+
+  /**
+   * Live validation of the input field when exiting it.
+   */
+  validateName() {
+    const namePattern = /^[a-zA-ZäöüÄÖÜß]+ [a-zA-ZäöüÄÖÜß]+$/;
+    this.showNameError = !namePattern.test(this.name);
+  }
+
+  /**
+ * Live validation of the input field when exiting it.
+ */
+  validateEmail() {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    this.showEmailError = !emailPattern.test(this.email);
+  }
+
+  /**
+ * Live validation of the textarea when exiting it.
+ */
+  validateMessage() {
+    this.showMessageError = !this.isMessageValid();
   }
 
   /**
