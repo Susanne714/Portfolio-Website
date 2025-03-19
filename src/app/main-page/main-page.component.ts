@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 import { HeroComponent } from '../main-content/hero/hero.component';
 import { AboutMeComponent } from '../main-content/about-me/about-me.component';
 import { SkillsComponent } from '../main-content/skills/skills.component';
@@ -19,6 +20,20 @@ import { ContactComponent } from '../main-content/contact/contact.component';
   styleUrls: ['./main-page.component.scss']
 })
 
-export class MainPageComponent {
+export class MainPageComponent implements OnInit {
+  constructor(private route: ActivatedRoute) { }
 
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      const section = params['section'];
+      if (section) {
+        setTimeout(() => {
+          const el = document.getElementById(section);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 0);
+      }
+    });
+  }
 }
