@@ -147,8 +147,9 @@ textarea {
 
 input:focus::placeholder,
 input:focus::placeholder,
-textarea:focus {
+textarea:focus::placeholder {
     color: $primary-color;
+    opacity: 0;
 }
 
 .contact-form-row:hover input::placeholder,
