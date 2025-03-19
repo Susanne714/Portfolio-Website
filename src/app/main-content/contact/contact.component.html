@@ -21,7 +21,7 @@
             <div class="contact-form-row">
                 <div class="contact-form-cell">                
                         <p class="input-title">{{'contact.form_name' | translate}}</p>
-                        <input autocomplete="off" type="text" name="name" placeholder="{{'contact.placeholder_name' | translate}}" required [(ngModel)]="name" (focus)="hideFieldError('name')">   
+                        <input autocomplete="off" type="text" name="name" placeholder="{{'contact.placeholder_name' | translate}}" required [(ngModel)]="name" (blur)="validateName()" (focus)="hideFieldError('name')">   
                         <span class="input-error" *ngIf="showNameError">{{'contact.error_name' | translate}}</span>
                 </div>            
             </div>
@@ -29,7 +29,7 @@
             <div class="contact-form-row">
                 <div class="contact-form-cell">                
                         <p class="input-title">{{'contact.form_email' | translate}}</p>                              
-                        <input autocomplete="off" type="email" name="email" placeholder="youremail@email.com" required [(ngModel)]="email" (focus)="hideFieldError('email')">
+                        <input autocomplete="off" type="email" name="email" placeholder="youremail@email.com" required [(ngModel)]="email" (blur)="validateEmail()" (focus)="hideFieldError('email')">
                         <span class="input-error" *ngIf="showEmailError">{{'contact.error_email' | translate}}</span>
                      
                 </div>            
@@ -38,7 +38,7 @@
             <div class="contact-form-row">
                 <div class="contact-form-cell">
                         <p class="input-title">{{'contact.form_message' | translate}}</p>           
-                        <textarea name="message" spellcheck="false" placeholder="Hello Susanne, I'm interested in..." required [(ngModel)]="message" (focus)="hideFieldError('message')" (input)="onMessageInput($event)" [ngClass]="{'filled': isMessageValid()}"></textarea>
+                        <textarea name="message" spellcheck="false" placeholder="{{'contact.placeholder_message' | translate}}" (focus)="hideFieldError('message')" (blur)="validateMessage()" (input)="onMessageInput($event)" [ngClass]="{'filled': isMessageValid()}"></textarea>
                         <span class="input-error" *ngIf="showMessageError">{{'contact.error_message' | translate}}</span>
                 </div>            
             </div>
@@ -59,8 +59,7 @@
     
             <div class="send-message">
                 <app-button label="Say Hello :-)" color="primary" [disableHover]="!allFieldsFilled" (click)="validateForm()"></app-button>
-            </div>
-                   
+            </div>                   
         </form> 
     
         <div class="success-message-overlay">
