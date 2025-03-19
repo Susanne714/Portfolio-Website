@@ -10,6 +10,7 @@
         position: fixed;
         height: 98px;
         width: 100%;
+        max-width: 1920px;
         z-index: 1000;
         padding: 0 96px;
         background: linear-gradient(#1C1C1C 30%, transparent);
@@ -37,7 +38,6 @@
 
             &:hover {
                 content: url(../../../assets/img/logo_light.png);
-                cursor: pointer;
                 transform: scale(1.05);
             }
         }
