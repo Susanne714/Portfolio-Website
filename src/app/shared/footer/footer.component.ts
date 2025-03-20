@@ -38,9 +38,14 @@ export class FooterComponent implements OnInit {
    * @param sectionId The ID of the section to scroll to.
    */
   scrollToSection(sectionId: string): void {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+    const currentUrl = this.router.url;
+    if (currentUrl === '/' || currentUrl === '/home') {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      this.router.navigate(['/'], { queryParams: { section: sectionId } });
     }
   }
 }
