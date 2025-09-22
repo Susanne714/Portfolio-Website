@@ -104,7 +104,7 @@ section {
 }
 
 .preview-section {
-    height: 320px;
+    height: 430px;
 
     >.preview-wrapper {
         position: relative;
@@ -114,6 +114,7 @@ section {
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out;
+        // opacity: 1;
 
         &.visible {
             opacity: 1;
