@@ -36,6 +36,10 @@
         "title": "Featured Projects",
         "introduction_1": "Explore a selection of my work here - Interact with ",
         "introduction_2": "projects to see my skills in action.",
+        "surfweather": {
+            "title": "SurfWeather",
+            "description": "Project currently in progress: this app provides real-time and forecast weather data, especially for water sports enthusiasts and for any desired location."
+        },
         "join": {
             "title": "Join",
             "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
