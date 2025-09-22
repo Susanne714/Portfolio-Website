@@ -36,6 +36,10 @@
         "title": "Ausgewählte Projekte",
         "introduction_1": "Hier finden Sie eine Auswahl meiner Arbeiten - Sehen Sie sich ",
         "introduction_2": "die Projekte gern an und probieren sie aus.",
+        "surfweather": {
+            "title": "SurfWeather",
+            "description": "Derzeit laufendes Projekt: diese App liefert Echtzeit- und Wettervorhersagedaten, insbesondere für Wasserportler und für jeden gewünschten Standort."
+        },
         "join": {
             "title": "Join",
             "description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu."
