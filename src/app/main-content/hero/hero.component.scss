@@ -136,10 +136,11 @@
     >.platforms {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 24px;
 
         >.mail-icon {
-            display: none;
+            // display: none;
+            display: flex;
         }
 
         >a {
