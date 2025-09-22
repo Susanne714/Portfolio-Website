@@ -23,9 +23,10 @@ export class ProjectsComponent {
    * Contains a preview list of projects with minimal information.
    */
   previewProjectData = [
-    { title: 'Join', techs: ['HTML', 'CSS', 'JavaScript', 'Firebase'], image: '../../../assets/img/project_join3.png', top: '0px' },
-    { title: 'El Pollo Loco', techs: ['HTML', 'CSS', 'JavaScript'], image: '../../../assets/img/project_el_pollo_loco1.png', top: '-120px' },
-    { title: 'Pokédex', techs: ['HTML', 'CSS', 'JavaScript', 'Rest-API'], image: '../../../assets/img/project_pokedex1.png', top: '-240px' }
+    { title: 'SurfWeather', techs: ['Angular', 'TypeScript', 'Rest-API'], image: '../../../assets/img/project_surfweather2.png', top: '0px' },
+    { title: 'Join', techs: ['HTML', 'CSS', 'JavaScript', 'Firebase'], image: '../../../assets/img/project_join3.png', top: '-120px' },
+    { title: 'El Pollo Loco', techs: ['HTML', 'CSS', 'JavaScript'], image: '../../../assets/img/project_el_pollo_loco1.png', top: '-200px' },
+    { title: 'Pokédex', techs: ['HTML', 'CSS', 'JavaScript', 'Rest-API'], image: '../../../assets/img/project_pokedex1.png', top: '-320px' }
   ];
 
   /**
@@ -35,6 +36,20 @@ export class ProjectsComponent {
   projectList: ProjectData[] = [
     {
       number: '01',
+      title: 'SurfWeather',
+      descriptionKey: 'projects.surfweather.description',
+      techs: [
+        { name: 'Angular', icon: '../../../../assets/img/icon_angular_green.png' },
+        { name: 'TypeScript', icon: '../../../../assets/img/icon_typescript_green.png' },
+        { name: 'Rest-API', icon: '../../../../assets/img/icon_rest_api_green.png' },
+        // { name: 'Firebase', icon: '../../../../assets/img/icon_firebase_green.png' }
+      ],
+      image: '../../../../assets/img/project_surfweather.png',
+      githubLink: 'https://github.com/Susanne714/Weather-App',
+      liveLink: 'https://surfweather.susanneborchardt.com/'
+    },
+    {
+      number: '02',
       title: 'Join',
       descriptionKey: 'projects.join.description',
       techs: [
@@ -48,7 +63,7 @@ export class ProjectsComponent {
       liveLink: 'https://join.susanneborchardt.com/'
     },
     {
-      number: '02',
+      number: '03',
       title: 'El Pollo Loco',
       descriptionKey: 'projects.el_pollo_loco.description',
       techs: [
@@ -61,7 +76,7 @@ export class ProjectsComponent {
       liveLink: 'http://el-pollo-loco.susanneborchardt.com/'
     },
     {
-      number: '03',
+      number: '04',
       title: 'Pokédex',
       descriptionKey: 'projects.pokedex.description',
       techs: [
